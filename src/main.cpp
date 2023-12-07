@@ -67,13 +67,10 @@ std::shared_ptr<RayTracer::RotateZ> sphereFactory(const SphereSettings &sphereSe
     return z;
 }
 
-std::shared_ptr<RayTracer::RotateZ> planeFactory(const PlaneSettings &planeSettings, std::shared_ptr<RayTracer::IMaterial> material)
+std::shared_ptr<RayTracer::Plane> planeFactory(const PlaneSettings &planeSettings, std::shared_ptr<RayTracer::IMaterial> material)
 {
     auto plane = std::make_shared<RayTracer::Plane>(planeSettings.axis, planeSettings.a, planeSettings.b, planeSettings.c, planeSettings.d, planeSettings.k, material);
-    auto x = std::make_shared<RayTracer::RotateX>(plane, planeSettings.rotation.x);
-    auto y = std::make_shared<RayTracer::RotateY>(x, planeSettings.rotation.y);
-    auto z = std::make_shared<RayTracer::RotateZ>(y, planeSettings.rotation.z);
-    return z;
+    return plane;
 }
 
 std::shared_ptr<RayTracer::RotateZ> coneFactory(const ConeSettings &coneSettings, std::shared_ptr<RayTracer::IMaterial> material)

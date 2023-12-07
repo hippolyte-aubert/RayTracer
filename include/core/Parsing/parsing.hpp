@@ -97,7 +97,6 @@ struct SphereSettings {
 
 struct PlaneSettings {
     std::string axis;
-    Math::Vector3 rotation;
     double a;
     double b;
     double c;

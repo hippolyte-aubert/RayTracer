@@ -78,9 +78,7 @@ PrimitivesSettings parsePrimitivesSettings(std::string filename) {
             libconfig::Setting& planeSetting = primitives["planes"];
             for (const auto& plane : planeSetting) {
                 PlaneSettings planeSettings;
-                plane.lookupValue("axis", planeSettings.axis);\
-                const libconfig::Setting& rotation = plane["rotation"];
-                planeSettings.rotation = Math::Vector3(rotation[0], rotation[1], rotation[2]);
+                plane.lookupValue("axis", planeSettings.axis);
                 plane.lookupValue("a", planeSettings.a);
                 plane.lookupValue("b", planeSettings.b);
                 plane.lookupValue("c", planeSettings.c);
