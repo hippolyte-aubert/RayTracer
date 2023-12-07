@@ -1,6 +1,6 @@
 # RayTracer
 
-![ExampleRender](./examples/results/metalsphere.ppm)
+![ExampleRender](./examples/results/metal_sphere.ppm)
 A CPU RayTracer in C++ based on the [Ray Tracing in One Weekend](https://raytracing.github.io) book series. It has additional features such as scene creation from config files and a few more shapes. This project currently works only on Linux.
 
 ## Building
@@ -34,6 +34,6 @@ You can run the project with `./raytracer [config_file].cfg > [your_filename].pp
 - Point light
 
 ## Some examples
-![ExampleRender](./examples/results/box.ppm)
-![ExampleRender](./examples/results/daylight.ppm)
-![ExampleRender](./examples/results/night.ppm)
+![ExampleRender](./images/daylight.png)
+![ExampleRender](./images/night.png)
+![ExampleRender](./images/box.png)
